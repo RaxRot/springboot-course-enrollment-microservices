@@ -1,9 +1,8 @@
 package com.raxrot.courseservice.dto;
 
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
-
-import java.math.BigDecimal;
 
 @Data
 public class CourseRequest {
@@ -14,9 +13,4 @@ public class CourseRequest {
     @NotBlank(message = "Description is required")
     @Size(min = 10, max = 255, message = "Description must be between 10 and 255 characters")
     private String description;
-
-    @NotNull(message = "Price is required")
-    @DecimalMin(value = "0.0", inclusive = false, message = "Price must be greater than 0")
-    @Digits(integer = 6, fraction = 2, message = "Price must be a valid amount (max 6 digits and 2 decimals)")
-    private BigDecimal price;
 }

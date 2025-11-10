@@ -60,7 +60,6 @@ public class CourseServiceImpl implements CourseService {
         }
         course.setName(courseRequest.getName());
         course.setDescription(courseRequest.getDescription());
-        course.setPrice(courseRequest.getPrice());
 
         Course updatedCourse=courseRepository.save(course);
 

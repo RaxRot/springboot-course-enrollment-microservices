@@ -10,7 +10,6 @@ public class CourseMapper {
         return Course.builder()
                 .name(courseRequest.getName())
                 .description(courseRequest.getDescription())
-                .price(courseRequest.getPrice())
                 .build();
     }
 
@@ -19,7 +18,6 @@ public class CourseMapper {
                 .id(course.getId())
                 .name(course.getName())
                 .description(course.getDescription())
-                .price(course.getPrice())
                 .createdAt(course.getCreatedAt())
                 .updatedAt(course.getUpdatedAt())
                 .imageUrl(course.getImageUrl())
