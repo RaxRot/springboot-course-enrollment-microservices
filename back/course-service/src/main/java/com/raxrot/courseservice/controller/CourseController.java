@@ -28,6 +28,11 @@ public class CourseController {
         return ResponseEntity.ok(courseService.getAllCourses());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<CourseResponse> getCourseById(@PathVariable Long id) {
+        return ResponseEntity.ok(courseService.getCourseById(id));
+    }
+
     @GetMapping("/search")
     public ResponseEntity<List<CourseResponse>> searchCourses(@RequestParam String keyword) {
         return ResponseEntity.ok(courseService.searchCourses(keyword));

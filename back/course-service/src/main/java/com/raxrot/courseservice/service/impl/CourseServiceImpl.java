@@ -33,6 +33,13 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
+    public CourseResponse getCourseById(Long id) {
+        Course course = courseRepository.findById(id)
+                .orElseThrow(()-> new ApiException("Course not found", HttpStatus.NOT_FOUND));
+        return CourseMapper.maptoCourseResponse(course);
+    }
+
+    @Override
     public List<CourseResponse> getAllCourses() {
         List<Course>courses= courseRepository.findAll();
         List<CourseResponse>courseResponses=courses.stream()
