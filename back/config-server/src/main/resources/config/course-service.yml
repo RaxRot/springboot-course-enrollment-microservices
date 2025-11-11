@@ -21,3 +21,10 @@ cloudinary:
   cloud-name: dfaq6ee6q
   api-key: 598834128149775
   api-secret: ${CLOUDINARY_API_SECRET}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
