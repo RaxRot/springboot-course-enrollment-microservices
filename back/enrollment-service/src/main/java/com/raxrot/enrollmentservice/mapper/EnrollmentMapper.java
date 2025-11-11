@@ -17,6 +17,7 @@ public class EnrollmentMapper {
                 .id(enrollment.getId())
                 .userId(enrollment.getUserId())
                 .courseId(enrollment.getCourseId())
+                .enrolledAt(enrollment.getEnrolledAt())
                 .build();
     }
 }

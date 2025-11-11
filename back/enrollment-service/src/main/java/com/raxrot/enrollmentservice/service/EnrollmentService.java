@@ -1,12 +1,12 @@
 package com.raxrot.enrollmentservice.service;
 
+import com.raxrot.enrollmentservice.dto.EnrollmentFullResponse;
 import com.raxrot.enrollmentservice.dto.EnrollmentRequest;
-import com.raxrot.enrollmentservice.dto.EnrollmentResponse;
-
-import java.util.List;
+import com.raxrot.enrollmentservice.dto.EnrollmentsByCourse;
+import com.raxrot.enrollmentservice.dto.EnrollmentsByUser;
 
 public interface EnrollmentService {
-    EnrollmentResponse enroll(EnrollmentRequest request);
-    List<EnrollmentResponse> getEnrollmentsByUser(Long userId);
-    List<EnrollmentResponse> getEnrollmentsByCourse(Long courseId);
+    EnrollmentFullResponse enroll(EnrollmentRequest request);
+    EnrollmentsByUser getEnrollmentsByUser(Long userId);
+    EnrollmentsByCourse getEnrollmentsByCourse(Long courseId);
 }
