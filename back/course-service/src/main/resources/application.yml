@@ -2,22 +2,5 @@ spring:
   application:
     name: course-service
 
-  datasource:
-    url: jdbc:mysql://localhost:3306/course_course_enrol?useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: 19649072Sever
-
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-    hibernate:
-      ddl-auto: update
-
-server:
-  port: 8081
-
-cloudinary:
-  cloud-name: dfaq6ee6q
-  api-key: 598834128149775
-  api-secret: ${CLOUDINARY_API_SECRET}
+  config:
+    import: optional:configserver:http://localhost:8888
